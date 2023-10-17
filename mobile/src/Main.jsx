@@ -17,6 +17,7 @@ import CropHome from './screens/CropHome';
 import SupportedCrop from './screens/SupportedCrop';
 
 import RightHeader from './components/RightHeader';
+import CameraComponent from './components/CameraComponent';
 
 const Main = () => {
   const Stack = createNativeStackNavigator();
@@ -65,6 +66,7 @@ const Main = () => {
             <Stack.Screen name='CropResult' component={CropResult} />
             <Stack.Screen name='CropHome' component={CropHome} />
             <Stack.Screen name='SupportedCrop' component={SupportedCrop} />
+            <Stack.Screen name='CameraComponent' component={CameraComponent} />
           </Stack.Group>
         </Stack.Navigator>
       </NavigationContainer>

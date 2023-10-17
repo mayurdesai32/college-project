@@ -6,37 +6,53 @@ import {
   Button,
   TouchableOpacity,
 } from 'react-native';
-import React, { useEffect } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import React, { useEffect, useState } from 'react';
+
 import { colors, defaultStyles } from '../styles/style';
-import Loader from '../components/Loader';
+
+import ImageGalleryComponent from '../components/ImageGalleryComponent';
 
 const loader = false;
 
-const Home = () => {
-  const navigation = useNavigation();
-  useEffect(() => {}, []);
+const PlantModule = ({ navigation, route }) => {
+  let imgsrc = require('../../assets/defimg.jpg');
+  const [imgSrc, setImgSrc] = useState(imgsrc);
+  useEffect(() => {}, [clickHandler]);
+  useEffect(() => {
+    if (route.params?.imgsrc) {
+      setImgSrc({ uri: route.params?.imgsrc });
+    }
+  }, [route.params]);
+  const clickHandler = async () => {
+    const image = await ImageGalleryComponent();
+    setImgSrc({ uri: image });
+  };
+
   return (
     <View
       style={{ ...defaultStyles.container, backgroundColor: colors.color5 }}
     >
       <Text style={defaultStyles.titleText}>Select Image to Classify</Text>
       <Text style={styles.descText}>
-        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Nostrum maxime!
+        Upload a disease plant leaf image to get to know which disease plant has
       </Text>
-      <View style={defaultStyles.imgContainer}>
-        <Image
-          style={defaultStyles.imgStyle}
-          source={require('../../assets/defimg.jpg')}
-        />
+      <View style={{ ...defaultStyles.imgContainer, marginVertical: 30 }}>
+        <Image style={defaultStyles.imgStyle} source={imgSrc} />
       </View>
       <View style={styles.btnContainerStyle}>
-        <TouchableOpacity style={styles.btnStyle} activeOpacity={0.9}>
+        <TouchableOpacity
+          style={styles.btnStyle}
+          activeOpacity={0.9}
+          onPress={() => navigation.navigate('CameraComponent')}
+        >
           <Text style={styles.btnText}>CAMERA</Text>
         </TouchableOpacity>
         <Text style={{ fontSize: 22, fontWeight: '400' }}>OR</Text>
-        <TouchableOpacity style={styles.btnStyle} activeOpacity={0.9}>
+        <TouchableOpacity
+          style={styles.btnStyle}
+          activeOpacity={0.9}
+          onPress={clickHandler}
+        >
           <Text style={styles.btnText}>GALLERY</Text>
         </TouchableOpacity>
       </View>
@@ -81,4 +97,4 @@ const styles = StyleSheet.create({
   },
   btnText: { color: colors.color2, fontSize: 20, fontWeight: '600' },
 });
-export default Home;
+export default PlantModule;
