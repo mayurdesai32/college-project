@@ -14,7 +14,7 @@ export const defaultStyles = StyleSheet.create({
     paddingHorizontal: 15,
   },
   titleText: {
-    color: colors.color3,
+    color: colors.color1,
     fontSize: 33,
     fontWeight: '800',
     paddingTop: 20,

@@ -10,12 +10,13 @@ const ModuleComponent = ({ title, link }) => {
       activeOpacity={0.9}
       style={{
         // width: 200,
+        overflow: 'hidden',
         flexBasis: '47%',
         height: 210,
         // backgroundColor: colors.color1,
         // borderWidth: 1,
         // marginLeft: 10,
-        borderRadius: 30,
+        borderRadius: 10,
         marginBottom: 50,
         elevation: 8,
       }}

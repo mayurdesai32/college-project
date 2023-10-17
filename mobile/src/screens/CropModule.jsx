@@ -27,8 +27,8 @@ const CropModule = ({ navigation }) => {
     <View
       style={{ ...defaultStyles.container, backgroundColor: colors.color5 }}
     >
-      <Text style={{ ...defaultStyles.titleText, fontSize: 22 }}>
-        Submit the Form to Find out the most suitable crop to grow in your farm
+      <Text style={{ ...defaultStyles.titleText, fontSize: 25 }}>
+        Find out the most suitable crop to grow in your farm
       </Text>
       <ScrollView
         showsVerticalScrollIndicator={false}

@@ -7,18 +7,16 @@ const ModuleScreen = () => {
     <View
       style={{
         ...defaultStyles.container,
-        paddingTop: 10,
+        paddingTop: 15,
         backgroundColor: colors.color5,
+        flex: 1,
+        // paddingBottom: 10,
       }}
     >
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        // style={{ marginBottom: 10 }}
-      >
+      <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
         <Text
           style={{
-            paddingTop: 10,
-            // color: colors.color5,
+            color: colors.color1,
             fontWeight: '500',
             fontSize: 39,
             textAlign: 'center',
@@ -29,10 +27,10 @@ const ModuleScreen = () => {
 
         <Text
           style={{
-            paddingTop: 15,
+            paddingTop: 5,
             // color: colors.color5,
             fontWeight: '300',
-            fontSize: 24,
+            fontSize: 22,
             paddingHorizontal: 15,
             textAlign: 'center',
           }}
@@ -71,15 +69,18 @@ const Module = ({ title, desc, funLink, imgSrc }) => {
       onPress={() => navigation.navigate(funLink)}
       activeOpacity={0.9}
       style={{
-        // borderWidth: 1,
-        borderRadius: 0.5,
+        borderWidth: 1,
+        overflow: 'hidden',
+        borderRadius: 15,
         borderCurve: 50,
-        elevation: 2,
+        elevation: 3,
         paddingVertical: 20,
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 25,
         backgroundColor: colors.color2,
+        marginBotton: 10,
+        marginHorizontal: 20,
       }}
     >
       <View

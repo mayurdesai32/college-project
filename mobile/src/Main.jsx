@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -16,32 +15,42 @@ import CropModule from './screens/CropModule';
 import CropResult from './screens/CropResult';
 import CropHome from './screens/CropHome';
 import SupportedCrop from './screens/SupportedCrop';
+
+import RightHeader from './components/RightHeader';
+
 const Main = () => {
   const Stack = createNativeStackNavigator();
+
   return (
     <>
-      {/* <Home /> */}
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName='Home'
           screenOptions={{
+            // headerShown: false,
+            title: 'CropiGo ',
             headerStyle: {
               backgroundColor: colors.color1,
             },
-
             headerTintColor: colors.color2,
             headerTitleStyle: {
               color: colors.color2,
-              fontSize: 25,
+              fontSize: 30,
               fontWeight: '600',
             },
             headerTitleAlign: 'center',
+            headerRight: () => <RightHeader />,
           }}
-          // screenOptions={{ headerShown: false }}
         >
           <Stack.Group>
             <Stack.Screen name='PlantModule' component={PlantModule} />
-            <Stack.Screen name='about' component={About} />
+            <Stack.Screen
+              name='about'
+              component={About}
+              options={{
+                headerRight: () => {},
+              }}
+            />
             <Stack.Screen name='result' component={Result} />
             <Stack.Screen name='PlantResult' component={PlantResult} />
             <Stack.Screen name='DiseaseInfo' component={DiseaseInfo} />
