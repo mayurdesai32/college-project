@@ -5,11 +5,12 @@ export const colors = {
   color4: '#a2f5b8',
   color2: '#fff',
   color3: 'red',
+  color5: '#FAFFED',
 };
 export const defaultStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.color2,
+    backgroundColor: colors.color5,
     paddingHorizontal: 15,
   },
   titleText: {

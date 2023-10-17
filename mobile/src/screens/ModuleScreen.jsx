@@ -4,7 +4,13 @@ import { colors, defaultStyles } from '../styles/style';
 import { useNavigation } from '@react-navigation/native';
 const ModuleScreen = () => {
   return (
-    <View style={{ ...defaultStyles.container, paddingTop: 10 }}>
+    <View
+      style={{
+        ...defaultStyles.container,
+        paddingTop: 10,
+        backgroundColor: colors.color5,
+      }}
+    >
       <ScrollView
         showsVerticalScrollIndicator={false}
         // style={{ marginBottom: 10 }}
@@ -12,7 +18,7 @@ const ModuleScreen = () => {
         <Text
           style={{
             paddingTop: 10,
-            color: colors.color5,
+            // color: colors.color5,
             fontWeight: '500',
             fontSize: 39,
             textAlign: 'center',
@@ -24,7 +30,7 @@ const ModuleScreen = () => {
         <Text
           style={{
             paddingTop: 15,
-            color: colors.color5,
+            // color: colors.color5,
             fontWeight: '300',
             fontSize: 24,
             paddingHorizontal: 15,
@@ -48,7 +54,7 @@ const ModuleScreen = () => {
           desc={
             ' This tool aids in choosing the ideal crop for your particular soil type.'
           }
-          funLink={'PlantHome'}
+          funLink={'CropHome'}
           imgSrc={require('../../assets/crop.png')}
           // navigation={navigation}
         />
@@ -73,6 +79,7 @@ const Module = ({ title, desc, funLink, imgSrc }) => {
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 25,
+        backgroundColor: colors.color2,
       }}
     >
       <View
@@ -97,7 +104,7 @@ const Module = ({ title, desc, funLink, imgSrc }) => {
         <Text
           style={{
             paddingTop: 5,
-            color: colors.color5,
+            // color: colors.color5,
             fontWeight: '300',
             fontSize: 20,
             paddingHorizontal: 17,

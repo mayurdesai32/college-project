@@ -12,6 +12,10 @@ import PlantHome from './screens/PlantHome';
 import SupportedDisease from './screens/SupportedDisease';
 import Home from './screens/Home';
 import ModuleScreen from './screens/ModuleScreen';
+import CropModule from './screens/CropModule';
+import CropResult from './screens/CropResult';
+import CropHome from './screens/CropHome';
+import SupportedCrop from './screens/SupportedCrop';
 const Main = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -31,6 +35,7 @@ const Main = () => {
               fontSize: 25,
               fontWeight: '600',
             },
+            headerTitleAlign: 'center',
           }}
           // screenOptions={{ headerShown: false }}
         >
@@ -47,6 +52,10 @@ const Main = () => {
               component={SupportedDisease}
             />
             <Stack.Screen name='ModuleScreen' component={ModuleScreen} />
+            <Stack.Screen name='CropModule' component={CropModule} />
+            <Stack.Screen name='CropResult' component={CropResult} />
+            <Stack.Screen name='CropHome' component={CropHome} />
+            <Stack.Screen name='SupportedCrop' component={SupportedCrop} />
           </Stack.Group>
         </Stack.Navigator>
       </NavigationContainer>

@@ -4,7 +4,13 @@ import { colors, defaultStyles } from '../styles/style';
 
 const Home = ({ navigation, route }) => {
   return (
-    <View style={{ ...defaultStyles.container, paddingTop: 50 }}>
+    <View
+      style={{
+        ...defaultStyles.container,
+        paddingTop: 50,
+        backgroundColor: colors.color5,
+      }}
+    >
       {/* <Text style={{ ...defaultStyles.titleText }}>CropiGo</Text> */}
       <Text style={{ textAlign: 'center', fontSize: 40, fontWeight: '600' }}>
         Advance your

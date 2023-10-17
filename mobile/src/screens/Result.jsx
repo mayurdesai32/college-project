@@ -11,7 +11,9 @@ const Result = () => {
   const navigation = useNavigation();
   useEffect(() => {}, []);
   return (
-    <View style={defaultStyles.container}>
+    <View
+      style={{ ...defaultStyles.container, backgroundColor: colors.color5 }}
+    >
       <Text style={defaultStyles.titleText}>Classify Image...</Text>
       <Text style={styles.descText}>
         Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor

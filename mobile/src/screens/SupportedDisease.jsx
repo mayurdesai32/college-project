@@ -119,7 +119,11 @@ const SupportedDisease = ({ navigation }) => {
             {data.map((ele) => (
               <List.Accordion
                 key={ele.title}
-                style={{ backgroundColor: colors.color1, marginVertical: 7 }}
+                style={{
+                  backgroundColor: colors.color1,
+                  //  marginVertical: 7
+                  marginTop: 7,
+                }}
                 title={ele.title}
                 titleStyle={{ ...styles.tag, paddingLeft: 20 }}
                 id={ele.title}
@@ -136,7 +140,7 @@ const SupportedDisease = ({ navigation }) => {
                     titleStyle={{ fontSize: 22, fontWeight: '600' }}
                     style={{
                       backgroundColor: colors.color4,
-                      marginHorizontal: 10,
+                      // marginHorizontal: 10,
                       borderBottomWidth: 1,
                     }}
                     // left={(props) => <List.Icon {...props} icon='folder' />}

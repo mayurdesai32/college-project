@@ -1,13 +1,15 @@
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import React from 'react';
-import { defaultStyles } from '../styles/style';
+import { colors, defaultStyles } from '../styles/style';
 import { useNavigation } from '@react-navigation/native';
 const PlantResult = { title: 'Tomato Late Bright', accuray: 88.9 };
 const imgSrc = '../../assets/defimg.jpg';
 const PlantModule = () => {
   const navigation = useNavigation();
   return (
-    <View style={defaultStyles.container}>
+    <View
+      style={{ ...defaultStyles.container, backgroundColor: colors.color5 }}
+    >
       <Text style={defaultStyles.titleText}>Classification Result</Text>
       <View style={defaultStyles.imgContainer}>
         <Image style={defaultStyles.imgStyle} source={require(imgSrc)} />
