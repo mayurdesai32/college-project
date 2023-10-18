@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { Camera, CameraType } from 'expo-camera';
 import { Avatar } from 'react-native-paper';
-import { colors } from '../styles/style';
+import { colors, defaultStyles } from '../styles/style';
 const CameraComponent = ({ navigation }) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [camera, setCamera] = useState(null);
@@ -43,7 +43,7 @@ const CameraComponent = ({ navigation }) => {
   if (hasPermission === null) return <View />;
   if (hasPermission === false)
     return (
-      <View style={defaultStyle}>
+      <View style={defaultStyles}>
         <Text>No access to camera</Text>
       </View>
     );

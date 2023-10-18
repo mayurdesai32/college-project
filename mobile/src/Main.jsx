@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Toast from 'react-native-toast-message';
 import PlantModule from './screens/PlantModule';
 import About from './screens/About';
 import Result from './screens/Result';
@@ -69,6 +70,7 @@ const Main = () => {
             <Stack.Screen name='CameraComponent' component={CameraComponent} />
           </Stack.Group>
         </Stack.Navigator>
+        <Toast position='top' />
       </NavigationContainer>
     </>
   );

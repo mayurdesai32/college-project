@@ -11,23 +11,46 @@ import React, { useEffect, useState } from 'react';
 import { colors, defaultStyles } from '../styles/style';
 
 import ImageGalleryComponent from '../components/ImageGalleryComponent';
-
+import Toast from 'react-native-toast-message';
 const loader = false;
 
 const PlantModule = ({ navigation, route }) => {
   let imgsrc = require('../../assets/defimg.jpg');
+  const [gotImg, setGotImg] = useState(false);
   const [imgSrc, setImgSrc] = useState(imgsrc);
-  useEffect(() => {}, [clickHandler]);
+  // useEffect(() => {
+  //   if (image) {
+  //     gotImg = true;
+  //   }
+  // }, [clickHandler]);
   useEffect(() => {
     if (route.params?.imgsrc) {
       setImgSrc({ uri: route.params?.imgsrc });
+
+      setGotImg(true);
     }
   }, [route.params]);
   const clickHandler = async () => {
-    const image = await ImageGalleryComponent();
-    setImgSrc({ uri: image });
+    try {
+      const image = await ImageGalleryComponent();
+      if (image) {
+        setGotImg(true);
+        setImgSrc({ uri: image });
+      }
+    } catch (error) {
+      console.log('hello world');
+    }
   };
-
+  const sumitHandler = () => {
+    if (gotImg) {
+      return navigation.navigate('result');
+    } else {
+      return Toast.show({
+        type: 'error',
+        text1: 'Please add photo',
+      });
+    }
+  };
   return (
     <View
       style={{ ...defaultStyles.container, backgroundColor: colors.color5 }}
@@ -64,7 +87,7 @@ const PlantModule = ({ navigation, route }) => {
           }}
           disabled={loader ? true : false}
           activeOpacity={0.9}
-          onPress={() => navigation.navigate('result')}
+          onPress={() => sumitHandler()}
         >
           <Text style={defaultStyles.btnProceedText}>
             PROCEED TO CLASSIFICATION

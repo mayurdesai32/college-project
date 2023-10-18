@@ -37,7 +37,7 @@ const About = () => {
         </Text>
         <Text style={styles.textStyle}>
           We can improve this model by collecting more info of climate season
-          and other crop
+          and other type of crop
         </Text>
         <Text style={styles.textStyle}>
           We can also improve this model by making dataset in such a way that
@@ -58,7 +58,7 @@ const About = () => {
         </Text>
         <Text style={styles.textStyle}>
           We can improve this model by collecting more info of age of the plant
-          and other plant spieces
+          and other type of plant spieces
         </Text>
 
         <Text style={{ textAlign: 'center', fontSize: 22, marginVertical: 10 }}>

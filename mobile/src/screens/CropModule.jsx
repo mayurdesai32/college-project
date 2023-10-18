@@ -5,23 +5,59 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import DropDownComponent from '../components/DropDownComponent';
 import { colors, defaultStyles } from '../styles/style';
-import { List } from 'react-native-paper';
 
+import Toast from 'react-native-toast-message';
 const { s_a, state_arr } = require('../../assets/data/data.js');
 
+import states from '../../assets/data/states.json';
+
 const CropModule = ({ navigation }) => {
-  const [selectedState, setSelectedState] = useState('Select State');
-  const [stateId, setStateId] = useState(null);
-  const [city, setCity] = useState('Select City');
+  const [selectedState, setSelectedState] = useState(null);
+
+  const [city, setCity] = useState([{ label: '', value: '' }]);
+  const [selectedCity, setSelectedCity] = useState('');
   const [nitrogen, setNitrogen] = useState(null);
   const [phosphorus, setPhosphorus] = useState(null);
   const [pottasium, setPottasium] = useState(null);
   const [ph, setPh] = useState(null);
   const [rainfall, setRainfall] = useState(null);
-  const [accordionExpanded, setAccordionExpanded] = useState(false);
-  const [accordionExpanded2, setAccordionExpanded2] = useState(false);
+
+  const transformCityData = (id) => {
+    return s_a[id].split('|').map((state, index) => ({
+      label: state.replace(/&/g, 'and'),
+      value: state.replace(/&/g, 'and'),
+    }));
+  };
+
+  function updateCity(selectedState) {
+    const transformedCityData = transformCityData(selectedState);
+    setCity(transformedCityData);
+  }
+
+  useEffect(() => {
+    if (selectedState) updateCity(selectedState);
+  }, [selectedState]);
+
+  const clickHandler = () => {
+    if (
+      !nitrogen ||
+      !rainfall ||
+      !ph ||
+      !phosphorus ||
+      !pottasium ||
+      !selectedCity
+    ) {
+      Toast.show({
+        type: 'error',
+        text1: 'Please all detail',
+      });
+    } else {
+      navigation.navigate('CropResult');
+    }
+  };
 
   return (
     <View
@@ -137,66 +173,21 @@ const CropModule = ({ navigation }) => {
         <Text style={{ fontSize: 20, fontWeight: '500', paddingTop: 10 }}>
           Select State
         </Text>
-
-        <List.Accordion
-          title={selectedState}
-          expanded={accordionExpanded}
-          onPress={() => setAccordionExpanded(!accordionExpanded)}
-          titleStyle={{ fontSize: 20, fontWeight: '500' }}
-          style={{
-            backgroundColor: colors.color2,
-            paddingVertical: 10,
-            borderColor: colors.color2,
-            borderWidth: 1,
-          }}
-        >
-          {state_arr.map((stateName, i) => (
-            <List.Item
-              title={stateName}
-              key={i}
-              onPress={() => {
-                setSelectedState(stateName);
-                setAccordionExpanded(false);
-                setStateId(i + 1);
-              }}
-              style={{
-                backgroundColor: colors.color2,
-                borderBottomWidth: 1,
-              }}
-            />
-          ))}
-        </List.Accordion>
-
+        <DropDownComponent
+          data={(data = states)}
+          value={selectedState}
+          setValue={setSelectedState}
+          name={'Select State'}
+        />
         <Text style={{ fontSize: 20, fontWeight: '500', paddingTop: 10 }}>
           Select City
         </Text>
-        <List.Accordion
-          title={city}
-          expanded={stateId ? accordionExpanded2 : false}
-          onPress={() => setAccordionExpanded2(!accordionExpanded2)}
-          titleStyle={{ fontSize: 20, fontWeight: '500' }}
-          style={{
-            backgroundColor: colors.color2,
-            paddingVertical: 10,
-            borderColor: colors.color2,
-            borderWidth: 1,
-          }}
-        >
-          {s_a[stateId]?.split('|').map((cityName, i) => (
-            <List.Item
-              title={cityName}
-              key={i}
-              onPress={() => {
-                setCity(cityName);
-                setAccordionExpanded2(false);
-              }}
-              style={{
-                backgroundColor: colors.color2,
-                borderBottomWidth: 1,
-              }}
-            />
-          ))}
-        </List.Accordion>
+        <DropDownComponent
+          data={city}
+          value={selectedCity}
+          setValue={setSelectedCity}
+          name={'Select City'}
+        />
 
         <TouchableOpacity
           style={{
@@ -205,7 +196,7 @@ const CropModule = ({ navigation }) => {
             marginTop: 10,
           }}
           activeOpacity={0.9}
-          onPress={() => navigation.navigate('CropResult')}
+          onPress={() => clickHandler()}
         >
           <Text
             style={{
