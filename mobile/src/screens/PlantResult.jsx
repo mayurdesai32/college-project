@@ -2,9 +2,9 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import React from 'react';
 import { colors, defaultStyles } from '../styles/style';
 import { useNavigation } from '@react-navigation/native';
-const PlantResult = { title: 'Tomato Late Bright', accuray: 88.9 };
+const Result = { title: 'Tomato Late Bright', accuray: 88.9 };
 const imgSrc = '../../assets/defimg.jpg';
-const PlantModule = () => {
+const PlantResult = () => {
   const navigation = useNavigation();
   return (
     <View
@@ -18,11 +18,11 @@ const PlantModule = () => {
         <View style={{ marginTop: 45 }}>
           <View style={styles.tagContainer}>
             <Text style={styles.tag}>Classification:</Text>
-            <Text style={styles.tagAns}>{PlantResult.title}</Text>
+            <Text style={styles.tagAns}>{Result.title}</Text>
           </View>
           <View style={{ ...styles.tagContainer, paddingTop: 18 }}>
             <Text style={styles.tag}>Prediction Accuracy: </Text>
-            <Text style={styles.tagAns}>{PlantResult.accuray}%</Text>
+            <Text style={styles.tagAns}>{Result.accuray}%</Text>
           </View>
         </View>
 
@@ -35,7 +35,7 @@ const PlantModule = () => {
           activeOpacity={0.9}
           onPress={() =>
             navigation.navigate('DiseaseInfo', {
-              title: PlantResult.title,
+              title: Result.title,
               imgSrc,
             })
           }
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default PlantModule;
+export default PlantResult;

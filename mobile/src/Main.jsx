@@ -19,6 +19,8 @@ import SupportedCrop from './screens/SupportedCrop';
 
 import RightHeader from './components/RightHeader';
 import CameraComponent from './components/CameraComponent';
+import CropHistory from './screens/CropHistory';
+import PlantHistory from './screens/PlantHistory';
 
 const Main = () => {
   const Stack = createNativeStackNavigator();
@@ -68,6 +70,8 @@ const Main = () => {
             <Stack.Screen name='CropHome' component={CropHome} />
             <Stack.Screen name='SupportedCrop' component={SupportedCrop} />
             <Stack.Screen name='CameraComponent' component={CameraComponent} />
+            <Stack.Screen name='CropHistory' component={CropHistory} />
+            <Stack.Screen name='PlantHistory' component={PlantHistory} />
           </Stack.Group>
         </Stack.Navigator>
         <Toast position='top' />

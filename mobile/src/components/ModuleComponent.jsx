@@ -5,7 +5,6 @@ import { Avatar } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 const ModuleComponent = ({ title, link }) => {
   const navigation = useNavigation();
-  console.log(link === 'PlantModule');
   return (
     <TouchableOpacity
       activeOpacity={0.9}

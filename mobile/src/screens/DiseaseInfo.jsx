@@ -3,8 +3,6 @@ import React, { useEffect } from 'react';
 import { colors, defaultStyles } from '../styles/style';
 import { List } from 'react-native-paper';
 const DiseaseInfo = ({ navigation, route }) => {
-  // let title = route.params.title;
-  // console.log(title);
   useEffect(() => {
     if (!route.params) {
       return navigation.navigate('PlantHome');

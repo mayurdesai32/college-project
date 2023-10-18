@@ -17,11 +17,9 @@ const CameraComponent = ({ navigation }) => {
 
   const takePicture = async () => {
     if (hasPermission) {
-      // Check for camera permissions
       try {
         const data = await camera.takePictureAsync();
         navigation.navigate('PlantModule', { imgsrc: data.uri });
-        // console.log(data.uri);
       } catch (error) {
         console.log(error);
       }
@@ -31,11 +29,11 @@ const CameraComponent = ({ navigation }) => {
   useEffect(() => {
     (async () => {
       const { status } = await Camera.requestCameraPermissionsAsync(); // Request camera permissions
-      console.log(status);
+
       if (status === 'granted') {
-        setHasPermission(true); // Set hasPermission to true if permission is granted
+        setHasPermission(true);
       } else {
-        setHasPermission(false); // Set hasPermission to false if permission is denied
+        setHasPermission(false);
       }
     })();
   }, []);

@@ -12,24 +12,21 @@ import { colors, defaultStyles } from '../styles/style';
 
 import ImageGalleryComponent from '../components/ImageGalleryComponent';
 import Toast from 'react-native-toast-message';
+import { storeData } from '../components/dataStorage';
 const loader = false;
-
+let data;
 const PlantModule = ({ navigation, route }) => {
   let imgsrc = require('../../assets/defimg.jpg');
   const [gotImg, setGotImg] = useState(false);
   const [imgSrc, setImgSrc] = useState(imgsrc);
-  // useEffect(() => {
-  //   if (image) {
-  //     gotImg = true;
-  //   }
-  // }, [clickHandler]);
+
   useEffect(() => {
     if (route.params?.imgsrc) {
       setImgSrc({ uri: route.params?.imgsrc });
 
       setGotImg(true);
     }
-  }, [route.params]);
+  }, [route.params, sumitHandler]);
   const clickHandler = async () => {
     try {
       const image = await ImageGalleryComponent();
@@ -38,12 +35,20 @@ const PlantModule = ({ navigation, route }) => {
         setImgSrc({ uri: image });
       }
     } catch (error) {
-      console.log('hello world');
+      console.log(error);
     }
   };
-  const sumitHandler = () => {
+  const sumitHandler = async () => {
     if (gotImg) {
-      return navigation.navigate('result');
+      // data = await axios.post('https:www.google.com/', { plantImg: imgSrc });
+      // storeData(data);
+      if (data) {
+        return navigation.navigate('result', {
+          title: 'Tomato Late Bright',
+          confident: 55,
+          dateTime: '25 jan 2023 time 10.05',
+        });
+      }
     } else {
       return Toast.show({
         type: 'error',

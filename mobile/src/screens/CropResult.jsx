@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 import { colors, defaultStyles } from '../styles/style';
+
 const CropResult = () => {
   return (
     <View

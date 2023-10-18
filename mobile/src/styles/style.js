@@ -6,6 +6,7 @@ export const colors = {
   color2: '#fff',
   color3: 'red',
   color5: '#FAFFED',
+  color6: '#0000',
 };
 export const defaultStyles = StyleSheet.create({
   container: {

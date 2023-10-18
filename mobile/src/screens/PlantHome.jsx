@@ -30,7 +30,7 @@ const PlantHome = () => {
         />
         <ModuleComponent
           title={'View Prediction History'}
-          link={'PlantModule'}
+          link={'PlantHistory'}
           key={1}
         />
         <ModuleComponent

@@ -30,7 +30,7 @@ const CropHome = () => {
         />
         <ModuleComponent
           title={'View Recommend Crop History'}
-          link={'PlantModule'}
+          link={'CropHistory'}
           key={1}
         />
         <ModuleComponent

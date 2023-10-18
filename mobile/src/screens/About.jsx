@@ -67,13 +67,10 @@ const About = () => {
         </Text>
 
         <Text style={styles.textStyle}>
-          1 Keeping record on Predicted or recommended history{' '}
+          1 Analysis on this Predicted or recommended history{' '}
         </Text>
         <Text style={styles.textStyle}>
-          2 Analysis on this Predicted or recommended history{' '}
-        </Text>
-        <Text style={styles.textStyle}>
-          3 Information retated to plant Disease (defination, symptons,
+          2 Information retated to plant Disease (defination, symptons,
           treatment, preventions ){' '}
         </Text>
       </ScrollView>
