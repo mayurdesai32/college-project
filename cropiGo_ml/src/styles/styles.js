@@ -8,7 +8,7 @@ import {
 export const colors = {
   color1: '#32a852', //green
   color4: '#a2f5b8', //light green
-  color2: '#fff', //white
+  color2: 'white', //white
   color3: 'red',
   color5: '#FAFFED', //yellow
   color6: 'black', //black
@@ -51,6 +51,7 @@ export const defaultStyles = StyleSheet.create({
     color: 'black',
     fontWeight: '500',
     paddingLeft: responsiveWidth(1.2),
+    alignSelf: 'flex-start',
   },
 
   TextInput: {
@@ -62,12 +63,15 @@ export const defaultStyles = StyleSheet.create({
     paddingHorizontal: responsiveWidth(3),
     borderWidth: 0.3,
     borderRadius: 5,
-    borderColor: 'black',
+    borderColor: 'gray',
     elevation: 1,
+    alignSelf: 'center',
+    width: responsiveWidth(92),
   },
   TextInputContainer: {
-    width: '98%',
-
+    // width: responsiveWidth(100),
+    justifyContent: 'center',
+    alignItems: 'center',
     marginBottom: responsiveHeight(2),
     paddingHorizontal: responsiveWidth(1.0),
   },

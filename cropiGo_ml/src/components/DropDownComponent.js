@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
+import {
+  responsiveFontSize,
+  responsiveHeight,
+  responsiveWidth,
+} from 'react-native-responsive-dimensions';
 // import AntDesign from '@expo/vector-icons/AntDesign';
 
 const data = [
@@ -60,27 +65,28 @@ const DropDownComponent = ({
 
 export default DropDownComponent;
 
-
-
-
-
-
 const styles = StyleSheet.create({
   container: {
     // backgroundColor: 'white',
-    // padding: 16,
-    paddingVertical: 16,
+    padding: responsiveHeight(1.4),
+
+    // paddingTop: responsiveHeight(0.3),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   dropdown: {
-    height: 50,
+    width: responsiveWidth(92),
+    height: responsiveHeight(6.5),
     borderColor: 'gray',
     borderWidth: 0.5,
     borderRadius: 8,
-    paddingHorizontal: 8,
+    // paddingHorizontal: 8,
     backgroundColor: 'white',
+    width: responsiveWidth(90),
   },
   icon: {
-    marginRight: 5,
+    marginRight: responsiveHeight(8),
+    // backgroundColor: 'red',
   },
   label: {
     position: 'absolute',
@@ -89,20 +95,24 @@ const styles = StyleSheet.create({
     top: 8,
     zIndex: 999,
     paddingHorizontal: 8,
-    fontSize: 20,
+    fontSize: responsiveFontSize(2.5),
   },
   placeholderStyle: {
-    fontSize: 20,
+    fontSize: responsiveFontSize(2.5),
+    paddingHorizontal: responsiveWidth(3),
   },
   selectedTextStyle: {
-    fontSize: 20,
+    fontSize: responsiveFontSize(2.5),
+    paddingHorizontal: responsiveWidth(3),
   },
   iconStyle: {
-    width: 20,
-    height: 20,
+    width: responsiveHeight(4),
+    height: responsiveWidth(4),
   },
   inputSearchStyle: {
-    height: 40,
-    fontSize: 16,
+    height: responsiveHeight(5),
+    fontSize: responsiveFontSize(2.2),
+
+    // backgroundColor: 'red',
   },
 });

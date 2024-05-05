@@ -7,25 +7,59 @@ import {
 } from 'react-native-responsive-dimensions';
 import {colors} from '../styles/styles';
 import {useNavigation} from '@react-navigation/native';
-const FeatureComponent = ({title, link}) => {
+
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+// FontAwesome
+const FeatureComponent = ({title, link, logo}) => {
   const navigation = useNavigation();
+  let logoTitle = '';
+  const iconDetail = {
+    color: colors.color2,
+    size: responsiveHeight(10),
+    backgroundColor: colors.color1,
+    styles: {
+      alignSelf: 'center',
+      height: responsiveHeight(15),
+      backgroundColor: colors.color1,
+      // width: '100%',
+    },
+  };
+
+  if (logo === 'model') {
+    logoTitle = 'robot-outline';
+  } else if (logo === 'history') {
+    logoTitle = 'history';
+  } else if (logo === 'list') {
+    logoTitle = 'format-list-bulleted';
+  } else if (logo === 'analytics') {
+    logoTitle = 'google-analytics';
+  }
   return (
     <TouchableOpacity
       onPress={() => navigation.navigate(link)}
       activeOpacity={0.7}
       style={pageStyles.container}>
-      <View
-        style={{
-          // width:responsiveWidth(43),
-          height: responsiveHeight(15),
-          backgroundColor: colors.color1,
-        }}
+      {/* <MaterialCommunityIcons.Button
+        name="google-analytics"
+        size={iconDetail.size}
+        backgroundColor={iconDetail.backgroundColor}
+        style={iconDetail.styles}
+      /> */}
+
+      {/* <Icon /> */}
+      <MaterialCommunityIcons.Button
+        activeOpacity={0.7}
+        onPress={() => navigation.navigate(link)}
+        name={logoTitle}
+        size={iconDetail.size}
+        backgroundColor={iconDetail.backgroundColor}
+        style={iconDetail.styles}
       />
       <View
         style={{
           justifyContent: 'center',
           alignItems: 'center',
-          //   paddingVertical:responsiveHeight(1),
           height: responsiveHeight(13),
           backgroundColor: colors.color2,
         }}>

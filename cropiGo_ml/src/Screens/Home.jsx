@@ -1,6 +1,6 @@
-import {View, Text, SafeAreaView, ScrollView} from 'react-native';
+import { View, Text, SafeAreaView, ScrollView } from 'react-native';
 import React from 'react';
-import {colors, defaultStyles} from '../styles/styles';
+import { colors, defaultStyles } from '../styles/styles';
 import {
   responsiveHeight,
   responsiveWidth,
@@ -12,15 +12,15 @@ import plantImage from '../asserts/plant.png';
 const Home = () => {
   return (
     <View
-      style={{...defaultStyles.layout, paddingHorizontal: responsiveWidth(8)}}>
+      style={{ ...defaultStyles.layout, paddingHorizontal: responsiveWidth(8) }}>
       <View>
-        <Text style={defaultStyles.titleText}>Our Services</Text>
+        <Text style={{ ...defaultStyles.titleText, marginTop: responsiveHeight(1.8), }}>Our Services</Text>
         <Text
           style={{
             fontSize: responsiveFontSize(2.7),
             fontWeight: '400',
             textAlign: 'center',
-            marginTop: responsiveHeight(1),
+            marginTop: responsiveHeight(0.5),
           }}>
           We assist you with these services so that you can raise the calibre of
           your farming.

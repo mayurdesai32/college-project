@@ -30,7 +30,6 @@ class CropRecommendModule(reactContext: ReactApplicationContext?) :
         try {
           var bitmap:Bitmap = MediaStore.Images.Media.getBitmap(reactApplicationContext.contentResolver, Uri.parse(uri1))
             // Load model
-//            Log.ASSERT("TAG", "Bitmap: $bitmap")
 
             val model = TfLiteModel.newInstance(reactApplicationContext)
 
@@ -53,22 +52,17 @@ class CropRecommendModule(reactContext: ReactApplicationContext?) :
 //
 //            // Determine the predicted class
             val maxIdx = outputFeature0.indices.maxByOrNull { outputFeature0[it] } ?: -1
-////            val predictedClass = if (maxIdx != -1) {
-////                if (maxIdx == 0) "Cat" else "Dog"
-////            } else {
-////                "Prediction failed"
-////            }
-//
+
 
 //            // Pass result to callback
-//            callback.invoke(maxIdx)
-////            callback.invoke(predictedClass)
 //            // Release resources
             model.close()
-            promise.resolve(maxIdx)
+  //          promise.resolve(maxIdx)   
+      val resultJson = "{\"id\": ${outputFeature0[maxIdx]}, \"maxIdx\": $maxIdx}"
+      promise.resolve(resultJson)
         } catch (e: Exception) {
             // Handle errors
-//            callback.invoke("Error: ${e.message}")
+
             promise.reject("Error: ${e.message}")
         }
     }
