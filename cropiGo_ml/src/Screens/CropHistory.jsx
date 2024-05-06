@@ -1,10 +1,15 @@
 import { View, Text, ScrollView, TouchableHighlight, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useEffect, useContext } from 'react';
+import StorageContext from '../context/storage/StorageContext';
 import { colors, defaultStyles } from '../styles/styles'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions'
 
 import SingleCropHistory from '../components/SingleCropHistory';
 const CropHistory = () => {
+
+
+  const { cropList, plantList, loading = true, predictCrop } = useContext(StorageContext);
+
   return (
     <View
       style={{ ...defaultStyles.layout, paddingBottom: responsiveHeight(2.2) }}
@@ -26,15 +31,12 @@ const CropHistory = () => {
 
       }} />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
+        {cropList.map((e, i) => {
+
+          return <  SingleCropHistory key={i} id={e.id} index={i} title={e.crop} />
+        })}
+
+
       </ScrollView>
 
     </View>

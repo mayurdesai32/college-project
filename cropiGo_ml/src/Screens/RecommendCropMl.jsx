@@ -68,6 +68,7 @@ const RecommendCropMl = ({ navigation }) => {
   function updateCity(selectedState) {
     const transformedCityData = transformCityData(selectedState);
     setCity(transformedCityData);
+    setSelectedCity("")
   }
 
   useEffect(() => {

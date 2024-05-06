@@ -1,11 +1,21 @@
 import { View, Text, ScrollView, TouchableHighlight, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import { colors, defaultStyles } from '../styles/styles'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions'
 
 import SingleCropHistory from '../components/SingleCropHistory';
+import StorageContext from '../context/storage/StorageContext';
+
 
 const PlantDiseaseHistory = () => {
+
+  const {
+    plantList,
+    loading = true,
+    predictPlant,
+  } = useContext(StorageContext);
+  console.log(plantList)
+
   return (
     <View
       style={{ ...defaultStyles.layout, paddingBottom: responsiveHeight(2.2) }}
@@ -27,15 +37,13 @@ const PlantDiseaseHistory = () => {
 
       }} />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
-        <SingleCropHistory index={1} title={"rice"} />
+        {plantList.map((e, i) => (<SingleCropHistory key={i} index={i}
+          title={e.label.split("   ")[1]}
+          id={e.id}
+          type={'plant'}
+        />))}
+
+
       </ScrollView>
 
     </View>

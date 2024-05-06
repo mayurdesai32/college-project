@@ -3,6 +3,6 @@ uvicorn
 numpy
 xgboost
 scikit-learn
-tensorflow
-PIL
+tensorflow-cpu
 python-multipart
+pillow

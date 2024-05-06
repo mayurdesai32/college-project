@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity, StyleSheet, NativeModules } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { colors, defaultStyles } from '../styles/styles'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions'
 // import Empty from '../asserts/empty.jpg'
@@ -7,18 +7,22 @@ import Empty from '../asserts/defimg.jpg'
 import Loading from '../components/Loading'
 import { PlantLabel } from '../asserts/label'
 import Toast from 'react-native-toast-message'
+import StorageContext from '../context/storage/StorageContext'
 const PlantResult = ({ route: { params }, navigation }) => {
 
-  const { CropRecommendModule } = NativeModules;
+  const {
+    plantList,
+    loading = true,
+    predictPlant,
+  } = useContext(StorageContext);
 
-  const [loading, setLoading] = useState(true)
-  const [label, setLabel] = useState("")
-  const [accurracy, setAccurracy] = useState(0)
-  console.log(accurracy)
+
+
+
 
   const onClickHander = () => {
-    console.log(label)
-    let splitData = label.split("   ")
+
+    let splitData = plantList[0]?.label.split("   ")
     let title = splitData[0]
     let spie = splitData[1]
     if (spie === 'healthy') {
@@ -38,15 +42,16 @@ const PlantResult = ({ route: { params }, navigation }) => {
   }
 
   const predict = async (img) => {
-    console.log(img)
-    let data1 = await CropRecommendModule.classifyImage(img)
-    data1 = JSON.parse(data1);
-    PlantLabel[data1.maxIdx]
-    setLabel(PlantLabel[data1.maxIdx])
-    setAccurracy(((data1?.id) * 100).toFixed(2))
-    // console.log((data1?.id).toFixed(2))
-    // console.log(data1)
-    setLoading(false)
+    // console.log(img)
+    // let data1 = await CropRecommendModule.classifyImage(img)
+    // data1 = JSON.parse(data1);
+    // PlantLabel[data1.maxIdx]
+    // setLabel(PlantLabel[data1.maxIdx])
+    // setAccurracy(((data1?.id) * 100).toFixed(2))
+    // // console.log((data1?.id).toFixed(2))
+    // // console.log(data1)
+    // setLoading(false)
+    predictPlant(img)
   }
 
   useEffect(() => {
@@ -66,7 +71,6 @@ const PlantResult = ({ route: { params }, navigation }) => {
 
       <Text style={{
         ...defaultStyles.titleText,
-        //   marginBottom:responsiveHeight(3),
         fontSize: responsiveFontSize(4.5),
         fontWeight: '800'
       }}>Classification Result</Text>
@@ -94,7 +98,7 @@ const PlantResult = ({ route: { params }, navigation }) => {
           fontSize: responsiveFontSize(2.5),
           fontWeight: '700',
           color: "black"
-        }}>{label}</Text>
+        }}>{plantList[0]?.label}</Text>
       </View>
 
 
@@ -114,7 +118,8 @@ const PlantResult = ({ route: { params }, navigation }) => {
           fontSize: responsiveFontSize(2.5),
           fontWeight: '700',
           color: "black"
-        }}>{accurracy} %</Text>
+          // "accurracy" 
+        }}>{plantList[0]?.accurracy} %</Text>
       </View>
 
 

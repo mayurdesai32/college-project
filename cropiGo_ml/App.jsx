@@ -32,60 +32,63 @@ import Abouts from './src/Screens/Abouts';
 import RightHeader from './src/components/RightHeader';
 import NetConnection from './src/components/NetConnection';
 import AnayalticScreen from './src/Screens/AnayalticScreen';
+import StorageState from './src/context/storage/StorageState';
 
 const App = () => {
 
   const Stack = createNativeStackNavigator();
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.color5 }}>
-      <StatusBar
-        backgroundColor={colors.color1}
-      />
-      <NavigationContainer>
-        <NetConnection />
-        <Stack.Navigator initialRouteName='splash' screenOptions={{
-          title: "CropiGo",
-          headerTitleAlign: 'center',
-          // headerRight: () => <RightHeader />,
-          headerStyle: {
-            backgroundColor: colors.color1,
-          },
-          headerTintColor: colors.color2,
-          headerTitleStyle: {
-            textAlign: "center",
-            fontSize: responsiveFontSize(4),
-            textTransform: 'capitalize',
-          },
-          headerRight: () =>
+    <StorageState>
+      <View style={{ flex: 1, backgroundColor: colors.color5 }}>
+        <StatusBar
+          backgroundColor={colors.color1}
+        />
+        <NavigationContainer>
+          <NetConnection />
+          <Stack.Navigator initialRouteName='splash' screenOptions={{
+            title: "CropiGo",
+            headerTitleAlign: 'center',
+            // headerRight: () => <RightHeader />,
+            headerStyle: {
+              backgroundColor: colors.color1,
+            },
+            headerTintColor: colors.color2,
+            headerTitleStyle: {
+              textAlign: "center",
+              fontSize: responsiveFontSize(4),
+              textTransform: 'capitalize',
+            },
+            headerRight: () =>
 
-            <RightHeader />
+              <RightHeader />
 
-          ,
-        }}>
-          <Stack.Screen name='splash' component={Splash} />
-          <Stack.Screen name='Abouts' component={Abouts} />
-          <Stack.Screen name='SupportedCrop' component={SupportedCrop} />
-          <Stack.Screen name='home' component={Home} />
-          <Stack.Screen name='cropHome' component={CropHome} />
-          <Stack.Screen name='recommendCropMl' component={RecommendCropMl} />
-          <Stack.Screen name='CropHistory' component={CropHistory} />
-          <Stack.Screen name='CropAnalytics' component={CropAnalytics} />
-          <Stack.Screen name='CropResult' component={CropResult} />
-          <Stack.Screen name='plantHome' component={PlantHome} />
-          <Stack.Screen name='plantMl' component={PlantMl} />
-          <Stack.Screen name='plantResult' component={PlantResult} />
-          <Stack.Screen name='SupportPlantDisease' component={SupportPlantDisease} />
-          <Stack.Screen name='singleDisease' component={SinglePlant} />
-          <Stack.Screen name='PlantHistory' component={PlantDiseaseHistory} />
-          <Stack.Screen name='Camera' component={Camera} />
-          <Stack.Screen name='AnayalticScreen' component={AnayalticScreen} />
+            ,
+          }}>
+            <Stack.Screen name='splash' component={Splash} />
+            <Stack.Screen name='Abouts' component={Abouts} />
+            <Stack.Screen name='SupportedCrop' component={SupportedCrop} />
+            <Stack.Screen name='home' component={Home} />
+            <Stack.Screen name='cropHome' component={CropHome} />
+            <Stack.Screen name='recommendCropMl' component={RecommendCropMl} />
+            <Stack.Screen name='CropHistory' component={CropHistory} />
+            <Stack.Screen name='CropAnalytics' component={CropAnalytics} />
+            <Stack.Screen name='CropResult' component={CropResult} />
+            <Stack.Screen name='plantHome' component={PlantHome} />
+            <Stack.Screen name='plantMl' component={PlantMl} />
+            <Stack.Screen name='plantResult' component={PlantResult} />
+            <Stack.Screen name='SupportPlantDisease' component={SupportPlantDisease} />
+            <Stack.Screen name='singleDisease' component={SinglePlant} />
+            <Stack.Screen name='PlantHistory' component={PlantDiseaseHistory} />
+            <Stack.Screen name='Camera' component={Camera} />
+            <Stack.Screen name='AnayalticScreen' component={AnayalticScreen} />
 
-        </Stack.Navigator>
-        <Toast position='top' />
+          </Stack.Navigator>
+          <Toast position='top' />
 
-      </NavigationContainer>
-    </View>
+        </NavigationContainer>
+      </View>
+    </StorageState>
   )
 }
 
