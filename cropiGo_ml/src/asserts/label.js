@@ -83,7 +83,6 @@ const PlantDiseaseLabel = [
   'Orange',
   'Peach',
   'Pepper-Bell',
-  'Potato',
   'Squash',
   'Strawberry',
   'Tomato',

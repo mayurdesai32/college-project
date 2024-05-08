@@ -6,3 +6,4 @@ scikit-learn
 tensorflow-cpu
 python-multipart
 pillow
+python-dotenv

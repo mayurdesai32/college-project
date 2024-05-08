@@ -15,7 +15,7 @@ const PlantMl = ({ navigation }) => {
 
   const getImage = async (type) => {
     let result;
-    const options = { mediaType: 'photo', selectionLimit: 1, width: 256, height: 256 }
+    const options = { mediaType: 'photo', selectionLimit: 1, width: 224, height: 224 }
     try {
 
       if (type === 'camera') {
@@ -71,7 +71,9 @@ const PlantMl = ({ navigation }) => {
         width: responsiveWidth(80),
         height: responsiveHeight(30),
         marginVertical: responsiveHeight(4)
-      }} />
+      }}
+        resizeMode='contain'
+      />
       <View style={{
         flexDirection: 'row',
         marginBottom: responsiveHeight(4.5),

@@ -5,7 +5,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Apple scab',
         desc: "Apple scab is a fungal disease caused by the pathogen Venturia inaequalis. It affects apple trees and can cause significant damage to both fruit and foliage if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715160818/plant/xeiockdowd1prjueqphd.jpg',
         Symptoms: [
           {
             title: 'Foliage Symptoms:',
@@ -59,7 +60,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Apple Black Rot',
         desc: "Black rot is a fungal disease affecting apple trees, caused by the pathogen Botryosphaeria obtusa. It can cause significant damage to both fruit and foliage if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715161118/0090d05d-d797-4c99-abd4-3b9cb323a5fd___JR_FrgE.S_208727.JPG_u4pwvs.jpg',
         Symptoms: [
           {
             title: 'Foliage Symptoms:',
@@ -112,6 +114,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Cedar Apple Rust',
         desc: "Cedar apple rust is a fungal disease caused by the pathogen Gymnosporangium juniperi-virginianae. It affects apple trees and can lead to significant damage if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715161228/025b2b9a-0ec4-4132-96ac-7f2832d0db4a___FREC_C.Rust_203655_90deg.JPG_ettoue.jpg',
         Symptoms: [
           {
             title: 'Foliage Symptoms:',
@@ -169,7 +173,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Grape Black Rot',
         desc: "Black rot is a fungal disease caused by the pathogen Guignardia bidwellii. It affects grapevines and can lead to significant losses in fruit yield and quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715164039/00905d40-bddf-460e-b348-1dbb6a34653b___FAM_B.Rot_200664_flipLR.JPG_upbnrh.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -222,7 +227,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Grape Esca (Black Measles)',
         desc: "Esca, also known as black measles, is a complex fungal disease affecting grapevines. It is caused by several pathogens, including Phaeoacremonium spp., Phaeomoniella chlamydospora, and Fomitiporia mediterranea. Esca can result in significant losses in grape yield and quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715164132/01162551-b800-4df8-ac46-64d17d6ac5bf___FAM_B.Msls_201153.JPG_iazwjh.jpg',
         Symptoms: [
           {
             title: 'Foliage Symptoms:',
@@ -275,7 +281,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Grape Leaf Blight (Isariopsis Leaf Spot)',
         desc: "Leaf blight, also known as Isariopsis leaf spot, is a fungal disease that affects grapevines. It is caused by the pathogen Isariopsis griseola. Leaf blight can lead to defoliation and reduced grape yield if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715164220/002e4d32-15cf-4350-bfba-dde7c8992392___FAM_L.Blight_204740.JPG_bbxofn.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -333,7 +340,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Corn Cercospora Leaf Spot (Gray Leaf Spot)',
         desc: "Cercospora leaf spot, also known as gray leaf spot, is a fungal disease caused by the pathogen Cercospora zeae-maydis. It affects corn (maize) plants and can lead to significant yield losses if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://storage.googleapis.com/kagglesdsdata/datasets/78313/182633/New%20Plant%20Diseases%20Dataset%28Augmented%29/New%20Plant%20Diseases%20Dataset%28Augmented%29/train/Corn_%28maize%29___Cercospora_leaf_spot%20Gray_leaf_spot/0157de0c-5b81-44a1-abe8-eecaa6f1261a___RS_GLSp%204287_270deg.JPG?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240508%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240508T094445Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=3543d24769d49cc008f049a5dd1c1d17052541371451a1b09adea6039a1d4818a3b013fc5f1bf19d259c55b24dd27e1396fb014f8aeb83dc6836a5739225bfc5352f4d6ffdd0612978a3f8b28a4ab964c05478105c1106e1a09083b84031d9dd412fe9ff91430f81169ca6feb562201db8b1a592fbbf1aef347cdcb15cfa7dff4047b5a900e77e4b57fe8a79fe754ee592ec6ea07cbb0f8b4ee14b9a200a1fc7ca351818e39f734e869ced2d7b6a8e2bf7d94b7508a1aa8e9c4f6a88814dd3b8facc82da0051f73d6cc7a77280bbc0e6313452f1e437460b3d1db8c44d863939b2cbac47e89a04afd1c98de7a6ca4cacfb9c6b540b9d86f3a5f1f33fe0c44697',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -386,7 +394,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Corn Common Rust',
         desc: "Common rust is a fungal disease caused by the pathogen Puccinia sorghi. It affects corn (maize) plants and can lead to reduced yield and quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715163894/RS_Rust_201566_flipLR.JPG_x0xthy.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -439,7 +448,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Corn Northern Leaf Blight',
         desc: "Northern leaf blight is a fungal disease caused by the pathogen Exserohilum turcicum. It affects corn (maize) plants and can lead to significant yield losses if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715163954/0079c731-80f5-4fea-b6a2-4ff23a7ce139___RS_NLB_204121_flipTB.JPG_xh7ryv.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -497,7 +507,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Cherry Powdery Mildew',
         desc: "Powdery mildew is a fungal disease caused by various species of the Podosphaera genus. It can affect cherry trees, including sour cherry varieties, leading to reduced fruit quality and yield. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://storage.googleapis.com/kagglesdsdata/datasets/78313/182633/New%20Plant%20Diseases%20Dataset%28Augmented%29/New%20Plant%20Diseases%20Dataset%28Augmented%29/train/Cherry_%28including_sour%29___Powdery_mildew/02ecd449-7b27-44d7-b59e-7e31813f0c18___FREC_Pwd.M%200450_flipLR.JPG?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240508%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240508T102147Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=49e691c673abeef27584170f861a6decaea1cbcdb2d5f0444411bca274e5442a849b64e677614c7c0851c7ee933d657472faaa52b6fc50b7abce51628417508465e6e7ab48bfb999b3371d40c5e3469528abbd6dc972ce44a856da7dffbf56543085eb1baedf5fd3ffc5a3f5e4e9e1469a3e4401ec4eb43dd51575808e9ef95c02317a1945c3a3bcb5d6a47dd3665f0b4f9021bf14357181d46b1cd5c518cd3d6b653ea280a06d709f4af79846d55d07607de007436b06b92d8fd5e9c83fb0ef7770af3aa938864f2139e978b3ac9e65f6ea25d6afce3f76751afc62c04c135cdb81658c53cc9f659406c748785f5f3b95ba4085156370a9e93877f9d92fc0d3',
         Symptoms: [
           {
             title: 'Foliage Symptoms:',
@@ -555,7 +566,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Orange Huanglongbing (Citrus Greening)',
         desc: "Huanglongbing (HLB), also known as citrus greening, is a devastating bacterial disease affecting citrus trees, including oranges. It is caused by the bacterium Candidatus Liberibacter asiaticus. HLB can lead to significant yield losses and the eventual decline of infected trees if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715163640/082992fa-822f-4ae0-87bb-2d34ad94d93e___CREC_HLB_205677.JPG_kegequ.jpg',
         Symptoms: [
           {
             title: 'Foliage Symptoms:',
@@ -613,7 +625,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Peach Bacterial Spot',
         desc: "Bacterial spot is a common and destructive disease affecting peach trees, caused by the bacterium Xanthomonas arboricola pv. pruni. It can lead to defoliation, fruit lesions, and reduced fruit quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715163549/0090cfcf-caf7-424d-b19c-533e09c6d24c___Rutg._Bact.S_202388.JPG_ujgugl.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -671,7 +684,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Pepper-bell Bacterial Spot',
         desc: "Bacterial spot is a common and destructive disease affecting bell pepper plants, caused by the bacterium Xanthomonas campestris pv. vesicatoria. It can lead to defoliation, fruit lesions, and reduced fruit quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715163458/01613cd0-d3cd-4e96-945c-a312002037bf___JR_B.Spot_203262.JPG_mcumhs.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -723,124 +737,125 @@ const PlantDiseaseDetail = [
       },
     ],
   },
-  {
-    plant: 'Potato',
-    spies: [
-      {
-        title: 'Potato Early Blight',
-        desc: "Early blight is a common fungal disease affecting potato plants, caused by the fungus Alternaria solani. It can lead to reduced yield and quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
+  // {
+  //   plant: 'Potato',
+  //   spies: [
+  //     {
+  //       title: 'Potato Early Blight',
+  //       desc: "Early blight is a common fungal disease affecting potato plants, caused by the fungus Alternaria solani. It can lead to reduced yield and quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
 
-        Symptoms: [
-          {
-            title: 'Leaf Symptoms:',
-            detail:
-              'Look for small, dark brown lesions with concentric rings on potato leaves, typically starting from the lower leaves. As the disease progresses, the lesions may enlarge, coalesce, and cause extensive leaf yellowing and defoliation.',
-          },
-          {
-            title: 'Tuber Symptoms:',
-            detail:
-              'Early blight can also affect potato tubers, causing shallow, sunken lesions with dark margins. These lesions may penetrate into the flesh of the tuber, leading to rotting and reduced storage quality.',
-          },
-        ],
+  //       Symptoms: [
+  //         {
+  //           title: 'Leaf Symptoms:',
+  //           detail:
+  //             'Look for small, dark brown lesions with concentric rings on potato leaves, typically starting from the lower leaves. As the disease progresses, the lesions may enlarge, coalesce, and cause extensive leaf yellowing and defoliation.',
+  //         },
+  //         {
+  //           title: 'Tuber Symptoms:',
+  //           detail:
+  //             'Early blight can also affect potato tubers, causing shallow, sunken lesions with dark margins. These lesions may penetrate into the flesh of the tuber, leading to rotting and reduced storage quality.',
+  //         },
+  //       ],
 
-        Prevention: [
-          {
-            title: 'Crop Rotation:',
-            detail:
-              'Practice crop rotation with non-solanaceous crops to reduce the buildup of Alternaria solani spores in the soil. Avoid planting potatoes in the same field year after year.',
-          },
-          {
-            title: 'Sanitation:',
-            detail:
-              'Remove and destroy infected potato debris, including leaves and stems, to reduce the overwintering of Alternaria solani spores. Avoid excessive irrigation and overhead watering, which can facilitate disease spread.',
-          },
-          {
-            title: 'Resistant Varieties:',
-            detail:
-              'Select potato varieties that exhibit resistance or tolerance to early blight to reduce the risk of infection and minimize disease severity.',
-          },
-        ],
+  //       Prevention: [
+  //         {
+  //           title: 'Crop Rotation:',
+  //           detail:
+  //             'Practice crop rotation with non-solanaceous crops to reduce the buildup of Alternaria solani spores in the soil. Avoid planting potatoes in the same field year after year.',
+  //         },
+  //         {
+  //           title: 'Sanitation:',
+  //           detail:
+  //             'Remove and destroy infected potato debris, including leaves and stems, to reduce the overwintering of Alternaria solani spores. Avoid excessive irrigation and overhead watering, which can facilitate disease spread.',
+  //         },
+  //         {
+  //           title: 'Resistant Varieties:',
+  //           detail:
+  //             'Select potato varieties that exhibit resistance or tolerance to early blight to reduce the risk of infection and minimize disease severity.',
+  //         },
+  //       ],
 
-        Remedies: [
-          {
-            title: 'Fungicidal Sprays:',
-            detail:
-              'Apply fungicides containing active ingredients such as chlorothalonil or mancozeb at the first sign of disease or according to a preventive spray schedule recommended for your potato-growing region.',
-          },
-          {
-            title: 'Cultural Practices:',
-            detail:
-              'Promote good air circulation and sunlight penetration by proper spacing and pruning of potato plants. Mulching can also help reduce soil splash and minimize disease spread.',
-          },
-          {
-            title: 'Foliar Fertilization:',
-            detail:
-              'Apply foliar fertilizers containing potassium and manganese to enhance potato plant health and improve their natural defense mechanisms against early blight.',
-          },
-        ],
-      },
-      {
-        title: 'Potato Late Blight',
-        desc: "Late blight is a destructive fungal disease affecting potato plants, caused by the oomycete pathogen Phytophthora infestans. It can lead to severe crop losses if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
+  //       Remedies: [
+  //         {
+  //           title: 'Fungicidal Sprays:',
+  //           detail:
+  //             'Apply fungicides containing active ingredients such as chlorothalonil or mancozeb at the first sign of disease or according to a preventive spray schedule recommended for your potato-growing region.',
+  //         },
+  //         {
+  //           title: 'Cultural Practices:',
+  //           detail:
+  //             'Promote good air circulation and sunlight penetration by proper spacing and pruning of potato plants. Mulching can also help reduce soil splash and minimize disease spread.',
+  //         },
+  //         {
+  //           title: 'Foliar Fertilization:',
+  //           detail:
+  //             'Apply foliar fertilizers containing potassium and manganese to enhance potato plant health and improve their natural defense mechanisms against early blight.',
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       title: 'Potato Late Blight',
+  //       desc: "Late blight is a destructive fungal disease affecting potato plants, caused by the oomycete pathogen Phytophthora infestans. It can lead to severe crop losses if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
 
-        Symptoms: [
-          {
-            title: 'Foliage Symptoms:',
-            detail:
-              'Look for dark, water-soaked lesions on potato leaves, often starting from the tips or edges. These lesions may rapidly expand and turn brown or black, causing extensive defoliation.',
-          },
-          {
-            title: 'Tuber Symptoms:',
-            detail:
-              'Late blight can also affect potato tubers, causing irregularly shaped, dark lesions on the surface. Infected tubers may develop a granular texture and become soft, watery, and foul-smelling.',
-          },
-        ],
+  //       Symptoms: [
+  //         {
+  //           title: 'Foliage Symptoms:',
+  //           detail:
+  //             'Look for dark, water-soaked lesions on potato leaves, often starting from the tips or edges. These lesions may rapidly expand and turn brown or black, causing extensive defoliation.',
+  //         },
+  //         {
+  //           title: 'Tuber Symptoms:',
+  //           detail:
+  //             'Late blight can also affect potato tubers, causing irregularly shaped, dark lesions on the surface. Infected tubers may develop a granular texture and become soft, watery, and foul-smelling.',
+  //         },
+  //       ],
 
-        Prevention: [
-          {
-            title: 'Crop Rotation:',
-            detail:
-              'Practice crop rotation with non-solanaceous crops to reduce the buildup of Phytophthora infestans spores in the soil. Avoid planting potatoes in the same field year after year.',
-          },
-          {
-            title: 'Sanitation:',
-            detail:
-              'Remove and destroy infected potato debris, including leaves, stems, and tubers, to reduce the overwintering of Phytophthora infestans spores. Avoid overhead irrigation and excessive moisture, which can facilitate disease spread.',
-          },
-          {
-            title: 'Resistant Varieties:',
-            detail:
-              'Select potato varieties that exhibit resistance or tolerance to late blight to reduce the risk of infection and minimize disease severity.',
-          },
-        ],
+  //       Prevention: [
+  //         {
+  //           title: 'Crop Rotation:',
+  //           detail:
+  //             'Practice crop rotation with non-solanaceous crops to reduce the buildup of Phytophthora infestans spores in the soil. Avoid planting potatoes in the same field year after year.',
+  //         },
+  //         {
+  //           title: 'Sanitation:',
+  //           detail:
+  //             'Remove and destroy infected potato debris, including leaves, stems, and tubers, to reduce the overwintering of Phytophthora infestans spores. Avoid overhead irrigation and excessive moisture, which can facilitate disease spread.',
+  //         },
+  //         {
+  //           title: 'Resistant Varieties:',
+  //           detail:
+  //             'Select potato varieties that exhibit resistance or tolerance to late blight to reduce the risk of infection and minimize disease severity.',
+  //         },
+  //       ],
 
-        Remedies: [
-          {
-            title: 'Fungicidal Sprays:',
-            detail:
-              'Apply fungicides containing active ingredients such as chlorothalonil, mancozeb, or metalaxyl at the first sign of disease or according to a preventive spray schedule recommended for your potato-growing region.',
-          },
-          {
-            title: 'Cultural Practices:',
-            detail:
-              'Promote good air circulation and sunlight penetration by proper spacing and pruning of potato plants. Mulching can help reduce soil splash and minimize disease spread.',
-          },
-          {
-            title: 'Foliar Fertilization:',
-            detail:
-              'Apply foliar fertilizers containing potassium and manganese to enhance potato plant health and improve their natural defense mechanisms against late blight.',
-          },
-        ],
-      },
-    ],
-  },
+  //       Remedies: [
+  //         {
+  //           title: 'Fungicidal Sprays:',
+  //           detail:
+  //             'Apply fungicides containing active ingredients such as chlorothalonil, mancozeb, or metalaxyl at the first sign of disease or according to a preventive spray schedule recommended for your potato-growing region.',
+  //         },
+  //         {
+  //           title: 'Cultural Practices:',
+  //           detail:
+  //             'Promote good air circulation and sunlight penetration by proper spacing and pruning of potato plants. Mulching can help reduce soil splash and minimize disease spread.',
+  //         },
+  //         {
+  //           title: 'Foliar Fertilization:',
+  //           detail:
+  //             'Apply foliar fertilizers containing potassium and manganese to enhance potato plant health and improve their natural defense mechanisms against late blight.',
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     plant: 'Squash',
     spies: [
       {
         title: 'Squash Powdery Mildew',
         desc: "Powdery mildew is a fungal disease commonly affecting squash plants, caused by various species of the genus Podosphaera. It can lead to reduced plant vigor, fruit yield, and quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715163049/009996d9-797e-4450-afad-e8346f7ede04___UMD_Powd.M_200216.JPG_efdl03.jpg',
         Symptoms: [
           {
             title: 'Foliage Symptoms:',
@@ -898,7 +913,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Strawberry Leaf Scorch',
         desc: "Leaf scorch is a fungal disease affecting strawberry plants, caused by the pathogen Diplocarpon earlianum. It can lead to reduced yield and quality of strawberries if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162961/01cff44f-9564-42f7-9a29-3daa487b306a___RS_L.Scorch_201333.JPG_koe2h8.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -956,7 +972,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Tomato Bacterial Spot',
         desc: "Bacterial spot is a common and destructive disease affecting tomato plants, caused by the bacterium Xanthomonas campestris pv. vesicatoria. It can lead to defoliation, fruit lesions, and reduced fruit quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162177/00639d29-2d1a-4fcf-9bd3-a2b3109c74c4___UF.GRC_BS_Lab_20Leaf_201054.JPG_a9wt7y.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -1009,7 +1026,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Tomato Early Blight',
         desc: "Early blight is a common fungal disease affecting tomato plants, caused by the fungus Alternaria solani. It can lead to reduced yield and quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715157857/plant/gcbwsbxjemaluh0dm95r.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -1062,7 +1080,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Tomato Late Blight',
         desc: "Late blight is a devastating fungal disease affecting tomato plants, caused by the oomycete pathogen Phytophthora infestans. It can lead to severe crop losses if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162352/00355ec2-f12c-4015-b8f9-94354f69ce22___RS_Late.B_205311.JPG_lpii1f.jpg',
         Symptoms: [
           {
             title: 'Foliage Symptoms:',
@@ -1115,7 +1134,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Tomato Leaf Mold',
         desc: "Leaf mold is a fungal disease affecting tomato plants, caused by the pathogen Fulvia fulva (formerly Cladosporium fulvum). It can lead to significant yield losses if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162439/0160c3b5-d89e-40e5-a313-49ae1524040a___Crnl_L.Mold_206823_flipTB.JPG_yklkg7.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -1168,7 +1188,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Tomato Septoria Leaf Spot',
         desc: "Septoria leaf spot is a common fungal disease affecting tomato plants, caused by the pathogen Septoria lycopersici. It can lead to defoliation, reduced yield, and fruit quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162516/00f16858-f392-4d9e-ad9f-efab8049a13f___JR_Sept.L.S_208368.JPG_sg6vx3.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -1221,7 +1242,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Tomato Spider Mites (Two-Spotted Spider Mite)',
         desc: "Spider mites, particularly the two-spotted spider mite (Tetranychus urticae), are common pests that can infest tomato plants. They feed on plant sap, leading to stippling, discoloration, and reduced plant vigor. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162591/00c8e9a0-1fb8-434b-8981-25511358ddc9___Com.G_SpM_FL_208717_flipTB.JPG_mutxig.jpg',
         Symptoms: [
           {
             title: 'Stippling:',
@@ -1279,7 +1301,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Tomato Target Spot',
         desc: "Target spot is a fungal disease that affects tomato plants, caused by the pathogen Corynespora cassiicola. It can lead to significant damage to tomato foliage and reduce yield if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162761/007ec913-8cfe-43ed-b458-f041a17266ae___Com.G_TgS_FL_209844.JPG_ccplyl.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -1332,7 +1355,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Tomato Yellow Leaf Curl Virus',
         desc: "Tomato yellow leaf curl virus (TYLCV) is a devastating viral disease affecting tomato plants, transmitted by the whitefly Bemisia tabaci. It can cause severe stunting, leaf curling, and yellowing, leading to significant yield losses. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162715/04167585-5400-4bdb-b58b-c5e944a1ecd8___YLCV_NREC_200079.JPG_br5xpp.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -1385,7 +1409,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Tomato Mosaic Virus',
         desc: "Tomato mosaic virus (ToMV) is a common viral disease affecting tomato plants, causing significant yield losses and reducing fruit quality. It can be transmitted through infected seeds, mechanical transmission, and by several species of aphids. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162850/000ec6ea-9063-4c33-8abe-d58ca8a88878___PSU_CG_202169.JPG_uulai8.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -1443,7 +1468,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Potato Early Blight',
         desc: "Early blight is a common fungal disease affecting potato plants, caused by the pathogen Alternaria solani. It can lead to reduced yield and quality if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715161916/001187a0-57ab-4329-baff-e7246a9edeb0___RS_Early.B_208178_180deg.JPG_lcdfg8.jpg',
         Symptoms: [
           {
             title: 'Leaf Symptoms:',
@@ -1496,7 +1522,8 @@ const PlantDiseaseDetail = [
       {
         title: 'Potato Late Blight',
         desc: "Late blight is a devastating fungal disease affecting potato plants, caused by the oomycete pathogen Phytophthora infestans. It can lead to severe crop losses if not managed properly. Here's some information on its symptoms, prevention, and remedies:",
-
+        image:
+          'https://res.cloudinary.com/dnk7nolqe/image/upload/v1715162013/0051e5e8-d1c4-4a84-bf3a-a426cdad6285___RS_LB_204640_180deg.JPG_zjdyzy.jpg',
         Symptoms: [
           {
             title: 'Foliage Symptoms:',

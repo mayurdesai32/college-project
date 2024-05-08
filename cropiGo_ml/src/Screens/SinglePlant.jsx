@@ -2,7 +2,8 @@ import { View, Text, Image, ScrollView } from 'react-native'
 import React, { useEffect } from 'react'
 import { defaultStyles } from '../styles/styles'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions'
-import homeimage from '../asserts/home.png'
+// import homeimage from '../asserts/home.png'
+import Empty from '../asserts/defimg.jpg'
 import AccordingComponent from '../components/AccordingComponent'
 import PlantDiseaseDetail from '../asserts/PlantDiseaseDetail'
 import { PlantDiseaseLabel, plant } from '../asserts/label'
@@ -38,7 +39,11 @@ const SinglePlant = ({ route: { params }, navigation }) => {
       }}> {data['title']}</Text>
 
 
-      <Image source={homeimage} style={{ width: responsiveWidth(65), height: responsiveHeight(30), backgroundColor: 'red' }} />
+      <Image source={data.image ? { uri: data.image } : Empty}
+        style={{
+          width: responsiveWidth(65), height: responsiveHeight(30),
+          backgroundColor: 'white'
+        }} />
       <View style={{
         borderBottomWidth: 0.7,
         borderColor: "black",

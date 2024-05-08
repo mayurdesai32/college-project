@@ -6,6 +6,7 @@ from fastapi.responses import JSONResponse
 from cropRecommend import Crop
 from predection import Plant
 # import numpy as np
+from OpenWeather import OpenWeather
 
 class CropSchema(BaseModel):
     Nitrogen: float
@@ -37,20 +38,26 @@ async def first_app():
     print("hello world")
     return {'message': "Hello world"}
 
-Temperature=44
-Humidity=66
+# Temperature=44
+# Humidity=66
 
 @app.post('/v2/api/crop') 
 async def crop(crop: CropSchema):
 
     print(crop.dict())  
     #get temp ,humidity from weather api
-    data=Crop(crop.Nitrogen, crop.Phosphorus, crop.Potassium,Temperature,Humidity,crop.phValue, crop.Rainfall)
-    output=data.Recommend()
-   
-    print('Predicted value from XGBoost is:', output)
-    return JSONResponse(content={'message': output})
+    weather=OpenWeather(crop.city).fetch_weather_data()
+    if(weather) :
+       
+        Temperature=weather["main"]['temp']
+        Humidity=weather["main"]['humidity']
 
+        data=Crop(crop.Nitrogen, crop.Phosphorus, crop.Potassium,Temperature,Humidity,crop.phValue, crop.Rainfall)
+        output=data.Recommend()
+   
+        print('Predicted value from XGBoost is:', output)
+        return JSONResponse(content={'message': output,"Temperature":Temperature,"Humidity":Humidity})
+    return JSONResponse(content={'message': "error "})
 
 
 

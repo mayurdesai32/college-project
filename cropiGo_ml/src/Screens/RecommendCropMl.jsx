@@ -47,7 +47,7 @@ const RecommendCropMl = ({ navigation }) => {
         "Potassium": Potassium,
         "phValue": pH,
         "Rainfall": Rainfall,
-        "city": selectedCity
+        "city": selectedCity.trim()
       });
     }
 

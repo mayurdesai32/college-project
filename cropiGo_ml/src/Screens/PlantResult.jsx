@@ -75,12 +75,15 @@ const PlantResult = ({ route: { params }, navigation }) => {
         fontWeight: '800'
       }}>Classification Result</Text>
 
-      <Image source={Empty} style={{
+      <Image source={params.file.uri ? ({ uri: params.file.uri }) : Empty} style={{
         width: responsiveWidth(80),
         height: responsiveHeight(30),
         borderRadius: responsiveWidth(5),
         marginVertical: responsiveHeight(4)
-      }} />
+      }}
+        resizeMode='contain'
+
+      />
 
       <View style={{
         flexDirection: 'row', alignItems: 'center',
@@ -98,7 +101,10 @@ const PlantResult = ({ route: { params }, navigation }) => {
           fontSize: responsiveFontSize(2.5),
           fontWeight: '700',
           color: "black"
-        }}>{plantList[0]?.label}</Text>
+        }}>
+          {/* {plantList[0]?.label} */}
+          {plantList[0]?.label.split("   ")[1]}
+        </Text>
       </View>
 
 

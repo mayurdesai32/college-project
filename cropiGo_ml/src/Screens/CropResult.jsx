@@ -43,8 +43,8 @@ const CropResult = ({ route: { params }, navigation }) => {
     { label: 'Potassium', value: Result?.phValue },
     { label: 'pH Value', value: Result?.phValue },
     { label: 'Rainfall (in mm)', value: `${Result?.Rainfall} mm` },
-    { label: 'Humidty (in %)', value: `${Result?.Humidty} %` },
-    { label: 'Temperature (in *c)', value: `${Result?.Temperature} c` },
+    { label: 'Humidity (in %)', value: `${Result?.Humidity} %` },
+    { label: 'Temperature (in k)', value: `${Result?.Temperature} k` },
   ]
   return (
     <>

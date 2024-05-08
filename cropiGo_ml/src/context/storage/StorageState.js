@@ -65,9 +65,13 @@ const StorageState = props => {
     dispatch({type: SET_LOADING});
     try {
       const url = `${BASE_URL}:8000/v2/api/crop`;
+      console.log(url);
       const response = await axios.post(url, params);
-      let Humidty = '55';
-      let Temperature = '55';
+
+      // const response = await axios.get(`${BASE_URL}:8000/`);
+      console.log(response);
+      // let Humidty = '55';
+      // let Temperature = '55';
       const id = new Date().getTime().toString();
       console.log(typeof id);
       dispatch({
@@ -75,8 +79,8 @@ const StorageState = props => {
         payload: {
           ...params,
           crop: response.data.message,
-          Humidty,
-          Temperature,
+          Humidity: response.data.Humidity,
+          Temperature: response.data.Temperature.toFixed(0),
           id: id,
         },
       });
@@ -107,6 +111,7 @@ const StorageState = props => {
     dispatch({type: SET_LOADING});
 
     try {
+      console.log('hello world');
       let data1 = await CropRecommendModule.classifyImage(params);
       data1 = JSON.parse(data1);
       console.log(data1);
@@ -123,6 +128,7 @@ const StorageState = props => {
         },
       });
     } catch (error) {
+      console.log(error);
       return Toast.show({
         type: 'error',
         text1: 'server side issue',
