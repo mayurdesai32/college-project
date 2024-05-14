@@ -1,20 +1,20 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {View, Text} from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
 import {colors} from '../styles/styles';
+import StorageContext from '../context/storage/StorageContext';
 
 const NetConnection = () => {
-  const [isConnected, setIsConnected] = useState(false);
+  const {connection, getConnection} = useContext(StorageContext);
 
-  const [isActive, setisActive] = useState(null);
+  // const [isActive, setisActive] = useState(null);
   const [showStatus, setShowStatus] = useState(true);
+
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
-      console.log('Connection type', state.type);
-      console.log('Is connected?', state.isConnected);
-      setIsConnected(state.isConnected);
       setShowStatus(true);
-      setisActive('yes');
+
+      getConnection(state.isConnected);
     });
     return () => {
       unsubscribe(); // Corrected: unsubscribe should be called directly, not as a function.
@@ -22,21 +22,18 @@ const NetConnection = () => {
   }, []);
 
   useEffect(() => {
-    // setShowStatus();
-
-    if (isActive === 'yes') {
+    if (connection) {
       setTimeout(() => {
         setShowStatus(false);
-        setisActive('no');
-      }, 5000);
+      }, 2000);
     }
-  }, [isActive]);
+  }, [connection]);
 
   return (
     <View>
       {showStatus ? (
         <View>
-          {isConnected ? (
+          {connection ? (
             <View
               style={{
                 backgroundColor: colors.color5,

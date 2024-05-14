@@ -12,6 +12,7 @@ import {
   GET_PLANT_LIST,
   ADD_PLANT,
   GET_SINGLE_PLANT,
+  SET_CONNECTION,
   CLEAR_SINGLE_PLANT,
   CLEAR_ALL_PLANT,
   BASE_URL,
@@ -28,6 +29,7 @@ const StorageState = props => {
     cropList: [],
     plantList: [],
     loading: false,
+    connection: false,
   };
   const [state, dispatch] = useReducer(StorageReducer, initialState);
   // getting data
@@ -61,11 +63,19 @@ const StorageState = props => {
     getData();
   }, []);
 
+  const getConnection = status => {
+    dispatch({
+      type: SET_CONNECTION,
+      payload: status,
+    });
+  };
+
   const predictCrop = async params => {
     dispatch({type: SET_LOADING});
     try {
       const url = `${BASE_URL}:8000/v2/api/crop`;
       console.log(url);
+      console.log('params', params);
       const response = await axios.post(url, params);
 
       // const response = await axios.get(`${BASE_URL}:8000/`);
@@ -149,10 +159,12 @@ const StorageState = props => {
         cropList: state.cropList,
         plantList: state.plantList,
         loading: state.loading,
+        connection: state.connection,
         predictCrop,
         removeSingleCrop,
         predictPlant,
         removeSinglePlant,
+        getConnection,
       }}>
       {props.children}
     </StorageContext.Provider>

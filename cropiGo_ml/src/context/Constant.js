@@ -16,7 +16,9 @@ export const CLEAR_ALL_PLANT = 'CLEAR_ALL_PLANT';
 export const SET_LOADING = 'SET_LOADING';
 export const SET_ = 'SET_LOADING';
 
+export const SET_CONNECTION = 'SET_CONNECTION';
+
 // export const SET_ALERT = 'SET_ALERT';
 // export const REMOVE_ALERT = 'REMOVE_ALERT';
-//192.168.19.223:8000
-export const BASE_URL = 'http://192.168.220.223';
+//192.168.19.223:8000 http://172.25.0.1:8000/v2/api/crop
+export const BASE_URL = 'http://172.25.0.1';

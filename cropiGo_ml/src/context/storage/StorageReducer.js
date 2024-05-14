@@ -9,12 +9,20 @@ import {
   GET_SINGLE_PLANT,
   CLEAR_SINGLE_PLANT,
   CLEAR_ALL_PLANT,
+  SET_CONNECTION,
 } from '../Constant';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const StorageReducer = (state, action) => {
   switch (action.type) {
+    case SET_CONNECTION:
+      // console.log('payload', action.payload);
+      return {
+        ...state,
+        connection: action.payload,
+      };
+
     case SET_LOADING:
       return {
         ...state,

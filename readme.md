@@ -1,10 +1,17 @@
 # CROPIGO: AI Assistant for Farmers
 
 ---
+## Demo Video:
+
+Watch a demonstration of CROPIGO in action on LinkedIn: [CROPIGO - Agriculture AI](https://www.linkedin.com/posts/mayurdesai88_cropigo-agriculture-ai-activity-7193943814200320000-C6vi?utm_source=share&utm_medium=member_desktop
+)
+
+
 
 ## Table of Contents:
 
 - [CROPIGO: AI Assistant for Farmers](#cropigo-ai-assistant-for-farmers)
+  - [Demo Video:](#demo-video)
   - [Table of Contents:](#table-of-contents)
   - [Introduction:](#introduction)
   - [Modules:](#modules)
@@ -13,7 +20,6 @@
   - [Technology Stack:](#technology-stack)
     - [a. Mobile Application:](#a-mobile-application)
     - [b. Backend:](#b-backend)
-    - [c. Website:](#c-website)
   - [Setup Instructions:](#setup-instructions)
     - [a. Server Setup:](#a-server-setup)
     - [b. Android Setup:](#b-android-setup)
@@ -56,9 +62,6 @@ The Plant Disease Classification module aids farmers in identifying diseases aff
 
 - Framework: FastAPI
 
-### c. Website:
-
-- Framework: Next.js
 
 ## Setup Instructions:
 
@@ -96,4 +99,4 @@ CROPIGO revolutionizes farming practices by empowering farmers with advanced AI 
 
 ## References:
 
-- List any external resources, libraries, or datasets used in the development of CROPIGO.
+-[Crop dataset from kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)

@@ -5,8 +5,9 @@ import { responsiveWidth, responsiveHeight, responsiveFontSize, responsiveScreen
 import Loading from '../components/Loading'
 
 import StorageContext from '../context/storage/StorageContext'
+import NoInternent from '../components/NoInternent'
 const CropResult = ({ route: { params }, navigation }) => {
-  const { cropList, plantList, loading = true, predictCrop } = useContext(StorageContext);
+  const { cropList, connection, loading = true, predictCrop } = useContext(StorageContext);
 
 
   let Result
@@ -28,14 +29,15 @@ const CropResult = ({ route: { params }, navigation }) => {
       !params?.Phosphorus ||
       !params?.Potassium ||
       !params?.city
+
     ) {
       console.log("resend")
       navigation.navigate('recommendCropMl')
     }
-    else {
+    else if (connection) {
       predictCrop(params)
     }
-  }, [params])
+  }, [params, connection])
 
   let data = [
     { label: 'Nitrogen', value: Result?.Nitrogen },
@@ -48,7 +50,7 @@ const CropResult = ({ route: { params }, navigation }) => {
   ]
   return (
     <>
-      {loading ? <><Loading /></> :
+      {!connection ? <NoInternent /> : loading ? <><Loading /></> :
         <View style={{
           ...defaultStyles.layout,
           paddingHorizontal: responsiveWidth(2.7),
